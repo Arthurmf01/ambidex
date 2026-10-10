@@ -103,6 +103,16 @@ The two rules that keep this safe:
 - **An agent only acts when the intent is clear.** If it is not, the capture stays an ordinary task and waits for me.
 - **An agent never completes the outward-facing step.** It drafts; sending, deleting and deciding stay with me.
 
+## What it looks like
+
+The daily page on a phone, shown here with invented sample tasks. Left: the "needs a decision" block, where the AI proposes and I tap. Right: the Done view, where anything completed or dropped can be reopened.
+
+<p>
+  <img src="docs/img/needs-a-decision.png" alt="Needs a decision: AI clean-up suggestions, unsorted captures and stale tasks, each with one-tap actions" width="330" align="top">
+  &nbsp;&nbsp;
+  <img src="docs/img/done-view.png" alt="Done view: completed and dropped tasks from the last 30 days, each with a Reopen button" width="330" align="top">
+</p>
+
 ## What makes it interesting
 
 **1. A Markdown file is the database.** Tasks live as lines in a Markdown file in a private Git repository. The phone, the Workers and every agent read and write that one file through the GitHub Contents API. No app database, no sync layer, no lock-in. Git gives history, undo and an audit trail of every change an agent has ever made.
